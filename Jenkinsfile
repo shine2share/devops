@@ -30,5 +30,10 @@ pipeline {
         echo " The environment is ${params.Env}"
       }
     }
+    stage('Deploy...') {
+      steps {
+        echo "hello deploy"
+      }
+    }
   }
 }
