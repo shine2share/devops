@@ -1,6 +1,6 @@
 pipeline {
   agent any
-  parameters {
+  parameters {[
     choice(
       name: 'Env',
       choices: ['DEV', 'QA', 'UAT', 'PROD'],
@@ -23,7 +23,7 @@ pipeline {
         name: 'STRING-PARAMETER', 
         trim: true
     )
-  }
+  ]}
   stages {
     stage('Environment') {
       steps {
