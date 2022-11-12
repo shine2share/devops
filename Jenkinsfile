@@ -1,5 +1,4 @@
 pipeline {
-  agent agen1
   parameters {
     choice(
       name: 'Env',
@@ -24,15 +23,17 @@ pipeline {
         trim: true
     )
   }
-  stages {
-    stage('Environment') {
-      steps {
-        echo " The environment is ${params.Env}"
+  node("agen1) {
+    stages {
+      stage('Environment') {
+        steps {
+          echo " The environment is ${params.Env}"
+        }
       }
-    }
-    stage('Deploy...') {
-      steps {
-        echo "hello deploy"
+      stage('Deploy...') {
+        steps {
+          echo "hello deploy"
+        }
       }
     }
   }
