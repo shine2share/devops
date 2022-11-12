@@ -23,7 +23,7 @@ pipeline {
         trim: true
     )
   }
-  node("agen1) {
+  node("agen1") {
     stages {
       stage('Environment') {
         steps {
